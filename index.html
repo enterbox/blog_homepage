@@ -19,19 +19,31 @@
       -webkit-animation:fadeinup 1.8s;
       animation: fadeinup 1.8s;
   }
-  div.link_card {
+    div.link_card {
       height: 80%;
-      background-color: rgba(0, 0, 0, 0.3);
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+      margin: 20px auto;
+      color: white;
+      background-image: url('https://pic1.imgdb.cn/item/67a88bcad0e0a243d4fd7a4e.jpg');
+      background-size: cover;
+      background-position: center;
+      transition: all 0.3s;
+    }
+    div.link_card_txt {
+      background-color: rgba(0, 0, 0, 0.3);
+      height: 80%;
+      border-radius: 10px;
       padding: 20px;
       margin: 20px auto;
       color: white;
+      transition: all 0.3s;
     }
-    div:hover.link_card{
-      background-color: rgba(255, 255, 255, 0.6);
-      color: black;
+    div:hover.link_card_txt {
+      background-color:rgba(255, 255, 255, 0.4);
       user-select: none;
+      color: black;
+      backdrop-filter: none;
     }
   @keyframes fadeinup {
     from {
@@ -54,8 +66,10 @@
     <p>在这里,分享生活的原点,欢乐的源泉!</p>
     <a href="https://eblog1.jkun.cf">
       <div class="link_card">
-        <h2>TEST</h2>
-        <p>这是测试网站</p>
+        <div class="link_card_txt">
+          <h2>Blog_1</h2>
+          <p>这是我的第一个博客</p>
+        </div>
       </div>
     </a>
   </div>
