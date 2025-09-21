@@ -38,6 +38,7 @@
       margin: 20px auto;
       color: white;
       transition: all 0.3s;
+      backdrop-filter: blur(3px);
     }
     div:hover.link_card_txt {
       background-color:rgba(255, 255, 255, 0.4);
@@ -45,32 +46,47 @@
       color: black;
       backdrop-filter: none;
     }
-  @keyframes fadeinup {
-    from {
-      transform: translatey(-800%);
-      width: 0;
-        }
-    to {
-      transform: translatey(0);
-      width: 90%;
+    div.card_inner {
+        height: 80%;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+        padding: 20px;
+        margin: 20px auto;
+        color: white;
     }
-  }
+    div.title{
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+  @keyframes fadeinup {
+      from {
+          transform: translatey(-300%);
+          rotate: -20deg;
+       }
+       to {
+       transform: translatey(0);
+       rotate: 0deg;
+    }
+    }
 </style>
 <body>
   <div class="card">
-    <h1>欢迎来到神金大网页</h1>
-    <p>这大概是我的博客!</p>
-  </div>
-  <div class="card">
-    <h1>Blogs</h1>
-    <p>在这里,分享生活的原点,欢乐的源泉!</p>
-    <a href="https://eblog1.jkun.cf">
-      <div class="link_card">
-        <div class="link_card_txt">
-          <h2>Blog_1</h2>
-          <p>这是我的第一个博客</p>
+    <div class="title">欢迎来到神金大网页</div>
+    <div class="card_inner">
+      <p>这大概是我的博客!</p>
+    </div>
+    <div class="card_inner">
+    <div class="title">Blogs</div>
+      <p>在这里,分享生活的原点,欢乐的源泉!</p>
+      <a href="https://eblog1.jkun.cf">
+        <div class="link_card">
+          <div class="link_card_txt">
+            <h2>Blog_1</h2>
+            <p>这是我的第一个博客</p>
+          </div>
         </div>
-      </div>
-    </a>
+      </a>
+    </div>
   </div>
 </body>
